@@ -8,7 +8,7 @@ export default function Viewnotes() {
   const {id} = useParams()
   const [oneNote, setoneNote] = useState({})
   const getOneNote = async ()=>{
-await axios.get(`http://localhost:7000/singlenote/${id}`)
+await axios.get(`https://notetaker-qqyn.onrender.com/singlenote/${id}`)
 .then((d)=>{setoneNote(d.data.mydata)})
   }
 

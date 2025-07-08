@@ -11,7 +11,7 @@ export default function Edit() {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:7000/singlenote/${id}`)
+    axios.get(`https://notetaker-qqyn.onrender.com/singlenote/${id}`)
       .then((res) => {
         const data = res.data.mydata; 
          reset(data);
@@ -22,7 +22,7 @@ export default function Edit() {
   }, []);
 
   const onSubmit = (data) => {
-    axios.patch(`http://localhost:7000/noteupdate/${id}`, data)
+    axios.patch(`https://notetaker-qqyn.onrender.com/noteupdate/${id}`, data)
       .then((res) => {
         alert(res.data.message);
         navigation('/allnotes'); 

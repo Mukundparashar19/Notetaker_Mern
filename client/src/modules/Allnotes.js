@@ -6,7 +6,7 @@ import axios from "axios";
 export default function Allnotes() {
   const [allnote, setallnote] = useState([]);
   const myNotes = () => {
-    axios.get("http://localhost:7000/noteslist").then((d) => {
+    axios.get("https://notetaker-qqyn.onrender.com/noteslist").then((d) => {
       setallnote(d.data.notelist);
     });
   };

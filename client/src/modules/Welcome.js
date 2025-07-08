@@ -10,7 +10,7 @@ export default function Welcome() {
 
       const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:7000/registernote",data)
+    axios.post("https://notetaker-qqyn.onrender.com/registernote",data)
     .then((res) =>{
       alert(res.data.message)
     })
